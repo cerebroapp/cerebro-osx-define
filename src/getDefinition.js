@@ -1,6 +1,8 @@
 // Get dict.py source code using webpack file-loader
 const command = require('raw-loader!./dict.py')
 const { memoize, shellCommand } = require('cerebro-tools')
+const fixPath = require('fix-path')
+fixPath()
 
 // Expire definition cache in 30 minutes
 const EXPIRATION = 30 * 60 * 1000
